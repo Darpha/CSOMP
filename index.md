@@ -23,5 +23,17 @@ DEA algoritması için önerilen yapı şekilde gösterilmiştir. Temel olarak �
 	2. En Küçük Kareler çözümünü yapan EKK birimi, 
 	3. Kontrol ve veri girişi. 
 
+Optimizasyon adımı; Φ’nin sütunları ile artık vektör arasındaki iç çarpım hesaplamasını içerir. Amaç artık vektör ile en yüksek korelasyonlu olan sütun vektörünün indeksini bulmaktır. Algoritmanın başında artık vektörü ölçüm vektörünün değerini alır. İlk indeks bulunduktan sonra, Φ'nin ilgili sütunu, EKK aşamasında kullanılmak üzere seçilen sütunların kaydedildiği bir matrise eklenir. Her yinelemede, daha önce seçilen sütunun etkisini gidermek için artık vektörünün güncellenmesi gerekmektedir. Bu işlem, toplam K (seyreklik değeri) defa tekrarlanır. Algoritmanın bu bölümü, hızlı ve verimli bir iç çarpım hesaplaması için paralel çarpma devreleri kullanılarak gerçekleştirilmiştir.
+
+Φ'nin seçilen sütunları, her yinelemede, aşağıda verilen üst-belirlenmiş (ing.overdetermined) sistemi çözmek için kullanılır.
+
+y = Φ ̂x
+
+Her yinelemede Φ matrisinin boyutları değişmektedir ve daha önce seçilen sütunlar sonraki yinelemelerde aşamalı olarak kullanılmaktadır. Böyle bir sistem genellikle EKK yaklaşımı ile çözülmektedir. Yeniden oluşturulan sinyalin artık vektörüne dik olmasını sağlamak için her adımda EKKişlemi gerçekleştirilmelidir. Bu, daha sonraki yinelemeler için aynı sütunun seçilmesini önlemekteve algoritma, K yineleme sonra işlemini tamamlamaktadır. EKKbirimi temel olarak ölçeklenebilir sayıda işleme elemanları (İE), karşılaştırma birimi, bellek (RAM) blokları ve denetleyiciden oluşur. İE'ler matris çarpması işlemini paralel yürüterek hızlandırmak için kullanılmaktadır.
+
+Kontrol; bir Sonlu Durum Makinesi (SDM) ile gerçekleştirilmiştir. Ana cihaz ile FPGA arasındaki veri aktarımı bir UART modülü ile sağlanmıştır. Sıfırlamadan sonra devre Boş durumuna geçmektedir.UART modülüneveri ulaştığı zaman, SDM, ölçüm matrisi Φ'yi ve ölçüm vektörü y'yi almak üzere UART Okuma durumuna geçer. Alınan veriler özel bellek bloklarına yazıldıktan sonra, devre başlama sinyalini beklemeye başlar. Başlama sinyali ile geldiği zaman, devre iç çarpım hesaplamasının yapıldığı ve maksimum indeksin bulunduğuoptimizasyon durumuna geçmektedir. Cmatrisi Cholesky Matris durumuna geçildikten sonra, Φ'nin seçilen sütunlarından hesaplanır. Bundan sonra, kontrol C matrisinin tersini hesaplamak için Cholesky Ters durumuna geçer. Yapılan yineleme sayısına bağlı olarak, SDM ya başka bir indeks bulmak için tekrar optimizasyon durumuna geçer veya yeniden oluşturulmuş sinyali ana cihaza göndermek için UART Aktarım durumuna geçer. Mimarinin çeşitli parçaları için gereken çoklayıcılar, SDM'nin uygun durumlarında tanımlanmıştır.
+
 ![HL](/images/fig_HL.png)
+
+
 
