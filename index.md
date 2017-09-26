@@ -18,9 +18,10 @@ EAD-DEA algoritması her bir yinelemede ölçüm matrisi ve artık vektörü ara
 ### Tasarlanan Donanım Mimarisi
 
 DEA algoritması için önerilen yapı şekilde gösterilmiştir. Temel olarak üç aşamadan oluşmaktadır:
-	1) En yüksek korelasyonlu vektörleri bulan optimizasyon birimi, 
-	2) En Küçük Kareler çözümünü yapan EKK birimi, 
-	3) Kontrol ve veri girişi. 
+
+	* En yüksek korelasyonlu vektörleri bulan optimizasyon birimi, 
+	* En Küçük Kareler çözümünü yapan EKK birimi, 
+	* Kontrol ve veri girişi. 
 
 ![HL](/images/fig_HL.png)
 
