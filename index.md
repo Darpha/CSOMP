@@ -15,6 +15,12 @@ EAD-DEA algoritması her bir yinelemede ölçüm matrisi ve artık vektörü ara
 
 ![Algoritma](/images/alg.png)
 
-### Support or Contact
+### Tasarlanan Donanım Mimarisi
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+DEA algoritması için önerilen yapı şekilde gösterilmiştir. Temel olarak üç aşamadan oluşmaktadır:
+	1) En yüksek korelasyonlu vektörleri bulan optimizasyon birimi, 
+	2) En Küçük Kareler çözümünü yapan EKK birimi, 
+	3) Kontrol ve veri girişi. 
+
+![HL](/images/fig_HL.png)
+
