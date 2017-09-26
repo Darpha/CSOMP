@@ -6,23 +6,7 @@ Bu projede, Dik Eşleştirme Arayış (DEA) algoritmasını temel alan iki özg�
 
 Sıkıştırıcı Algılama; Nyquist-Shannon örnekleme teorisinin belirttiğinden daha az sayıda örnek kullanarak sinyal elde edilmesine ve bu örneklerden geri çatılmasına olanak tanıyan, sinyal işleme alanında öne çıkan yöntemlerden biridir. Doğru bir şekilde sinyal geri çatımı için iki temel şart belirtilmiştir; alt-örneklenen sinyalin seyrekliği ve algılama yapısının rastgele olması. Çoğu sinyalin belirli bir etki alanında seyreklik özelliği göstermesi nedeniyle, gerçek zamanlı sinyalleri içeren uygulamalar SA yönteminden büyük ölçüde faydalanmaktadır. Orijinal sinyali yeniden elde edebilmek için karmaşık geri çatma algoritmalarına ihtiyaç duyması bu yöntemin dezavantajlarından biridir. Yazılım uygulamalarının gerçek zamanlı sinyal işleme sistemleri için yetersiz kalması, donanım hızlandırıcılarının bu iş için kullanılmasını gerekli kılmıştır.
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
+![Sıkıştırıcı Algılama] (https://github.com/Darpha/CSOMP/blob/master/images/CS_basic.png)
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
