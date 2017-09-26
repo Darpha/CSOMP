@@ -8,11 +8,12 @@ Sıkıştırıcı Algılama; Nyquist-Shannon örnekleme teorisinin belirttiğind
 
 ![Sıkıştırıcı Algılama](/images/CS_basic.png)
 
+
 ### En Az Destek Dikgen Eşleştirme Arayış Algoritması
 
-![Algoritma](/images/alg.png)
-
 EAD-DEA algoritması her bir yinelemede ölçüm matrisi ve artık vektörü arasındaki maksimum korelâsyonu veren En az Destek Parametresi (L) tane sütunu seçerek bunların indekslerini kısmi destek kümesine ekler. Bu destek kümesi tahmini işareti elde etmek ve artık vektörünü güncellemek için kullanılır. Bu işlem L defa veya durdurma koşulu sağlanana kadar yinelenir. Görüldüğü üzere EAD-DEA algoritması kısmi destek kümesini, her bir destek kümesi adayını tek tek kontrol etmeksizin hızlı bir şekilde seçmektedir. Başlangıçta L değeri min⁡(L/2,M/2) olarak seçilir ve teorik olarak bulunan durdurma değerine ulaşıldığında veya L yineleme sonucunda işlem sonlanır.
+
+![Algoritma](/images/alg.png)
 
 ### Support or Contact
 
