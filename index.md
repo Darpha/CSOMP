@@ -35,5 +35,12 @@ Kontrol; bir Sonlu Durum Makinesi (SDM) ile gerçekleştirilmiştir. Ana cihaz i
 
 ![HL](/images/fig_HL.png)
 
+### EKG Görüntüleyici Sistem
 
+SA tekniğiyle algılanan sinyaller, tasarım içinde tanımlanan RAM bloklarında saklanmaktadır. Ölçüm matrisi ve dalgacık dönüşümü için gereken temel küme matrisi de EAD-DEA birimi içerisindeki RAM bloklarında başlangıç değeri olarak saklanmak amacıyla sentez aşamasında belirlenmektedir. Ölçüm vektörü kullanılan segmentuzunluğuna bağlı olarak, ilgili RAM bloğundan alınarak yeniden oluşturma birimine aktarılmaktadır. Bu aşamada ana modül yeniden oluşturma işleminin bitmesini beklemektedir. Bu işlem bittikten sonra elde edilen yeniden oluşturulmuş sinyal; görüntüleme arayüzü aracılığıyla video çıkışı olarak dışarıya verilmektedir. Sistem ilgili segmentin uzunluğuna göre bir süre boş konumda bekledikten sonra yeni bir ölçüm vektörünü yeniden oluşturma birimine yollayarak işleme devam etmektedir.
 
+Tasarlanan sistem Zedboard geliştirme kartı üzerinde Xilinx Zynq-7000 SoC XC7Z020-CLG484 FPGA üzerinde uygulanmıştır. Yeniden oluşturma birimi her yeni segment için oluşturulan sinyali ardışık olarak bir RAM bloğuna yazmaktadır. Görüntüleyici sistem, yeniden oluşturulan sinyali ana modülde bulunan bu RAM bloğundan ardışık olarak okumakta ve bağlı olan monitörde görüntülemektedir. Görüntüleme arayüzü hem VGA hem de HDMI çıkışından çıktı verebilmektedir. 
+
+Sistem Xilinx Vivado yazılımı ile sentezlenmiş ve uygulanmıştır. VGA arayüzü için 108 MHz (1280x1024 çözünürlük) frekansında bir saat hızı gerektiğinden sistemin hızı bu frekansa sabitlenmiştir. Geliştirme kartı üzerinde bulunan 100 MHz hızındaki osilatör, FPGA içinde bulunan PLL (PhaseLockedLoop) modülü yardımıyla gereken frekans üretilecek şekilde ayarlanmıştır. Tasarlanan EKG görüntüleyici sistem aşağıda görülebilmektedir.
+
+![EKG](/images/EKG_fig.png)
