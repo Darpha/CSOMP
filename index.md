@@ -1,6 +1,6 @@
-## Sıkıştırıcı Algılama ile Sinyal Yeniden Oluşturma
+Bu proje, TÜBİTAK tarafından ARDEB - 3001 programı kapsamında desteklenmiştir. 
 
-Bu projede, Dik Eşleştirme Arayış (DEA) algoritmasını temel alan iki özgün donanım mimarisi önerilmiştir. Önerilen mimariler; farklı problem boyutlarına, amaçlanan uygulamaya ve hedef alınan FPGA'ya bağlı olarak uyarlanabilecek şekilde ölçeklenebilir olarak tasarlanmıştır. Gerçekleştirilen donanımlar FPGA üzerinde sentezlenmiş ve performansı değerlendirilmiştir. Tasarlanan donanımlar, gerçek zamanlı EKG yeniden çatma işlemi yapan bir sisteme, geri çatma birimi olarak entegre edilmiş ve elde edilen sinyaller FPGA üzerinden doğrudan video çıktısı alınarak görüntülenmiştir.
+Projede, Dik Eşleştirme Arayış (DEA) algoritmasını temel alan iki özgün donanım mimarisi önerilmiştir. Önerilen mimariler; farklı problem boyutlarına, amaçlanan uygulamaya ve hedef alınan FPGA'ya bağlı olarak uyarlanabilecek şekilde ölçeklenebilir olarak tasarlanmıştır. Gerçekleştirilen donanımlar FPGA üzerinde sentezlenmiş ve performansı değerlendirilmiştir. Tasarlanan donanımlar, gerçek zamanlı EKG yeniden çatma işlemi yapan bir sisteme, geri çatma birimi olarak entegre edilmiş ve elde edilen sinyaller FPGA üzerinden doğrudan video çıktısı alınarak görüntülenmiştir.
 
 ### Sıkıştırıcı Algılama
 
